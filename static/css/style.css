@@ -15,7 +15,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 65px;
+    min-height: 10vh;
     background-color: #595959;
 }
 .logo{
@@ -47,8 +47,8 @@ nav{
 }
 .burger div{
     background-color: #e6e6e6;
-    width: 30px;
-    height: 3px;
+    width: 27px;
+    height: 1px;
     margin: 5px;
 }
 .container{
@@ -71,7 +71,7 @@ nav{
 }
 .read-more-btn{
     margin-top: 20px;
-    padding: 5px 12px;
+    padding: 8px 12px;
     background-color: #595959;
     color: #e6e6e6;
     border: none;
@@ -81,7 +81,7 @@ nav{
     cursor: pointer;
 }
 .read-more-btn:hover{
-    opacity: 0.7;
+    padding: 10px 14px;
 }
 .more-text{
     display: none;
@@ -91,4 +91,42 @@ nav{
 }
 .text.show-more .dots{
     display: none;
+}
+
+@media screen and (max-width: 500px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-options{
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top: 10vh;
+        background-color: #595959;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+.nav-active{
+    transform: translateX(0);
+}
+@keyframes nav-option-fade{
+    from{
+        opacity: 0;
+        transform: translate(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
 }
