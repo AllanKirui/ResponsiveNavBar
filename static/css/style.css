@@ -89,3 +89,6 @@ nav{
 .text.show-more .more-text{
     display: inline;
 }
+.text.show-more .dots{
+    display: none;
+}
